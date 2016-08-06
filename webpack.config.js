@@ -1,9 +1,14 @@
 'use strict';
 module.exports = {
-    entry: './src/app.js',
+    entry: {
+        app: './src/app',
+        a: './src/aa',
+        b: './src/bb',
+        c: ['./src/cc', './src/dd']
+    },
     output: {
         path: './dist',
-        filename: 'bundle.js'
+        filename: '[name].entry.js'
     },
     module: {
         loaders: [{
